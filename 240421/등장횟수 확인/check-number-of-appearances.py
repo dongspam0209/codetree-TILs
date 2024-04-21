@@ -1,9 +1,7 @@
-arr=[]
+cnt = 0
 for _ in range(5):
-    arr.append(int(input()))
-ans=0
-for num in arr:
-    if num%2==0:
-        ans+=1
-
-print(ans)
+	a = int(input())
+	
+	if a % 2 == 0:
+		cnt += 1
+print(cnt)
