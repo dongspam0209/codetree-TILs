@@ -4,6 +4,7 @@ idx=0
 while n>1:
     idx+=1
     n/=idx
-    cnt+=1
+    if n>1:
+        cnt+=1
 
 print(cnt)
