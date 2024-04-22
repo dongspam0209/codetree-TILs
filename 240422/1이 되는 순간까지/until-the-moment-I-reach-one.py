@@ -1,21 +1,13 @@
-N=int(input())
-case=list()
+n=int(input())
 
-def func(N):
-    if N==1:
-        return case
-    a=N%2
+def get_num(n):
+    # print(n)
+    if n==1:
+        return 0
     
-    if a==0:#짝수
-        func(N//2)
-        case.append('*')
-    if a==1:
-        func(N//3)
-        case.append('*')
-        
-    return case
+    if n%2==0:
+        return get_num(n//2)+1
+    else:
+        return get_num(n//3)+1
 
-
-
-ans=func(N)
-print(len(ans))
+print(get_num(n))
