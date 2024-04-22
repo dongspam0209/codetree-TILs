@@ -3,7 +3,7 @@ case=list()
 
 def func(N):
     if N==1:
-        return
+        return case
     a=N%2
     
     if a==0:#짝수
