@@ -14,7 +14,7 @@ N,M=map(int,input().split())
 
 def Fun(N,M):
     ans=0
-    for num in range(1,min(N,M)):
+    for num in range(1,min(N,M)+1):
         if N%num==0 and M%num==0:
             ans=num
     print((N*M)//ans)
