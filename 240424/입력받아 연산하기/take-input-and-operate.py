@@ -1,3 +1,4 @@
-a,b=map(int,input().split())
+a=int(input())
+b=int(input())
 print(a+87)
-print(a%10)
+print(b%10)
