@@ -16,9 +16,8 @@ def Fun(N,M):
     ans=0
     for num in range(1,min(N,M)):
         if N*num%M==0 and N*num%N==0:
-            ans=N*num
-            return ans
+            ans=num
+    print(N*M//ans)
 
 
-
-print(Fun(N,M))
+Fun(N,M)
