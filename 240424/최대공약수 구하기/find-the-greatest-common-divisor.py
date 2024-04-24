@@ -8,6 +8,7 @@ def func(n,m):
         
         if num==1:
             print(num)
+            return
 
 
 func(n,m)
