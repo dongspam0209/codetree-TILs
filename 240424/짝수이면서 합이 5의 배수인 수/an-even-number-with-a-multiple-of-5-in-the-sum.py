@@ -1,6 +1,6 @@
 n=int(input())
 def check(n):
-    return (n//10+n%10)%5==0
+    return (n//10+n%10)%5==0 and n%2==0
 
 toggle=check(n)
 if toggle:
