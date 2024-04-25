@@ -13,4 +13,8 @@ def func(character,a,b):
     else:
         return False
 
-print(f'{a} {o} {c} = {func(o,a,c)}')
+ans=func(o,a,c)
+if ans==False:
+    print("False")
+else:
+    print(f'{a} {o} {c} = {ans}}')
