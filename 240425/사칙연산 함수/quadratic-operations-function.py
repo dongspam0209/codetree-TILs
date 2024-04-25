@@ -17,4 +17,4 @@ ans=func(o,a,c)
 if ans==False:
     print("False")
 else:
-    print(f'{a} {o} {c} = {ans}}')
+    print(f'{a} {o} {c} = {ans}')
