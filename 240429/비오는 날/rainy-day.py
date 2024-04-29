@@ -14,5 +14,19 @@ for idx,weather in enumerate(weather_list):
         year,month,day=map(int,weather.date.split("-"))
         if latest_year>year:
             latest_year=year
+            latest_month=month
+            latest_day=day
             target_idx=idx
+        elif latest_year==year:
+            if latest_month>month:
+                latest_year=year
+                latest_month=month
+                latest_day=day
+                target_idx=idx
+            elif latest_month==month:
+                if latest_day>day:
+                    latest_year=year
+                    latest_month=month
+                    latest_day=day
+                    target_idx=idx
 print(weather_list[target_idx].date,weather_list[target_idx].day,weather_list[target_idx].weather)
