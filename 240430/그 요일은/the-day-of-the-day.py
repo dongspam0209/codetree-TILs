@@ -6,21 +6,14 @@ second_date=sum(arr[:m_2])+d_2
 
 diff=second_date-first_date
 
-day_count_list=[0]*7
 share=diff//7
 remain=diff%7
-
-for _ in range(share):
-    for idx in range(len(day_count_list)):
-        day_count_list[idx]+=1
-
+day_list=[share]*7
 for idx in range(remain+1):
-    day_count_list[idx]+=1
+    day_list[idx]+=1
 
-day_list=['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
-ans_idx=0
-for idx in range(len(day_list)):
-    if day_list[idx]==A:
-        ans_idx=idx
-        
-print(day_count_list[ans_idx])
+weekday_list=['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+
+for idx in range(len(weekday_list)):
+    if weekday_list[idx]==A:
+        print(day_list[idx])
