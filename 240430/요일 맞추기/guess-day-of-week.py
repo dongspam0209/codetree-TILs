@@ -9,5 +9,5 @@ if difference<0:
     print(weekday_list[count])
 else:
     count=abs(difference)%7
-    weekday_list=['Mon','Fri','Wed','Thu','Fri','Sat','Sun']
+    weekday_list=['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
     print(weekday_list[count])
