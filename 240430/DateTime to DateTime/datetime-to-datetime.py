@@ -1,15 +1,7 @@
-a,b,c=map(int,input().split())
-day=(a-11)*60*24
-hour=(b-11)*60
-minute=c-11
-
-if day<0:
-    print(-1)
+a,b,c=map(int,input().split())#일 시 분
+A=10*24*60+11*60+11
+B=(a-1)*24*60+b*60+c
+if B-A>0:
+    print(B-A)
 else:
-    if hour<0:
-        print(-1)
-    else:
-        if minute<0:
-            print(-1)
-        else:
-            print(day+hour+minute)
+    print(-1)
