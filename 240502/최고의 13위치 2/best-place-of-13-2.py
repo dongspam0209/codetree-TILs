@@ -8,6 +8,7 @@ for _  in range(N):
 for i in range(N):
     for j in range(N-2):
         for k in range(N):
+            sum=0
             for l in range(N-2):
                 if (k,l)==(i,j) or (k,l)==(i,j+1) or (k,l)==(i,j+2):
                     continue
