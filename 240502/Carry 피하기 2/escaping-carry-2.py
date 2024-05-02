@@ -34,5 +34,8 @@ for ans in sum_list:
     for idx in range(len(ans)):
         max_num+=ans[idx]*10**idx
     MAX_INT=max(max_num,MAX_INT)
-
-print(MAX_INT)
+    
+if MAX_INT<0:
+    print(-1)
+else:
+    print(MAX_INT)
