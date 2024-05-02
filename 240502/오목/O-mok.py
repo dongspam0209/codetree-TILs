@@ -29,6 +29,6 @@ for i in range(19):
                 next_y+=dy
 
 print(winner)
-if len(ans)==5:
+if len(ans)>=5:
     ans_x,ans_y=ans[2]
     print(ans_x+1,ans_y+1)
