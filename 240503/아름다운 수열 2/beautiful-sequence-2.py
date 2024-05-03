@@ -7,9 +7,11 @@ for i in range(N-M+1):
     cnt=0
     for j in range(i,i+M):
         for k in range(M):
-            if A[j] == B[k]:
+            if A[j] == B[k] and tmp[k]=='':
                 cnt+=1
                 tmp[k]=B[k]
+                break
+                
         if cnt==M and '' not in tmp:
             ans+=1
 
