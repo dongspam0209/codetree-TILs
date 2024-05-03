@@ -7,7 +7,7 @@ for i in range(N):
         if i!=j:
             for k in range(i,j+1):
                 partial_sum+=arr[k]
-            mean=partial_sum/(j+1-i)
+            mean=partial_sum//(j+1-i)
             if mean in arr[i:j+1]:
                 cnt+=1
 print(cnt)
