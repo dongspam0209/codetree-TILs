@@ -1,7 +1,7 @@
 N=int(input())
 arr=list(map(int,input().split()))
 mean_list=[]
-for i in range(N-1):
+for i in range(N):
     for j in range(i+1,N):
         partial_sum=0
         for k in range(i,j+1):
