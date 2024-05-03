@@ -26,12 +26,14 @@ MAX_X=-sys.maxsize
 MAX_Y=-sys.maxsize
 MIN_X=sys.maxsize
 MIN_Y=sys.maxsize
-
-for x,y in rect_1_pos:
-    MAX_X=max(x,MAX_X)
-    MAX_Y=max(y,MAX_Y)
-    MIN_X=min(x,MIN_X)
-    MIN_Y=min(y,MIN_Y)
-
+if len(rect_1_pos)>0:
+    for x,y in rect_1_pos:
+        MAX_X=max(x,MAX_X)
+        MAX_Y=max(y,MAX_Y)
+        MIN_X=min(x,MIN_X)
+        MIN_Y=min(y,MIN_Y)
+else:
+    print(0)
+    exit()
 # print(MAX_X,MAX_Y,MIN_X,MIN_Y)
 print((MAX_X-MIN_X)*(MAX_Y-MIN_Y))
