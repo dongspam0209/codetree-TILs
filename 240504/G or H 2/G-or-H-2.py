@@ -7,8 +7,8 @@ for _ in range(N):
     idx=int(idx)
     arr[idx]=word
 
-for k in range(99):
-    for i in range(0,100-k):
+for k in range(100):
+    for i in range(0,101-k):
         G_cnt=0
         H_cnt=0
         ans=0
