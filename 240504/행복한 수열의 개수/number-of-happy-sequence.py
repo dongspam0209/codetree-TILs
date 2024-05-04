@@ -6,6 +6,8 @@ for _ in range(n):
 cnt=0
 for i in range(n):
     for j in range(n):
+        if i>n:
+            break
         cur=arr[i][j]
         for k in range(j,j+m):
             if j+m>n:
@@ -20,6 +22,8 @@ for i in range(n):
         
 for j in range(n):
     for i in range(n):
+        if j>n:
+            break
         cur=arr[i][j]
         for l in range(i,i+m):
             if i+m>n:
