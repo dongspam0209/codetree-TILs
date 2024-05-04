@@ -2,11 +2,13 @@ n,m=map(int,input().split())
 arr=[]
 for _ in range(n):
     arr.append(list(map(int,input().split())))
-
+if m==1:
+    print(n*2)
+    exit()
 cnt=0
 for i in range(n):
     for j in range(n):
-        if i>n:
+        if i>=n:
             break
         cur=arr[i][j]
         for k in range(j,j+m):
@@ -22,7 +24,7 @@ for i in range(n):
         
 for j in range(n):
     for i in range(n):
-        if j>n:
+        if j>=n:
             break
         cur=arr[i][j]
         for l in range(i,i+m):
