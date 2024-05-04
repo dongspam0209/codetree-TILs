@@ -2,6 +2,9 @@ n,m=map(int,input().split())
 arr=[]
 for _ in range(n):
     arr.append(list(map(int,input().split())))
+if n==1 and m==1:
+    print(2)
+    exit()
 ans=0
 for i in range(n):
     cnt=1
