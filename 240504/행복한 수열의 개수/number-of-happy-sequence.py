@@ -2,38 +2,35 @@ n,m=map(int,input().split())
 arr=[]
 for _ in range(n):
     arr.append(list(map(int,input().split())))
-if m==1:
-    print(n*2)
-    exit()
-cnt=0
+ans=0
 for i in range(n):
-    for j in range(n):
-        if i>=n:
-            break
-        cur=arr[i][j]
-        for k in range(j,j+m):
-            if j+m>n:
-                continue
-            if cur!=arr[i][k]:
+    cnt=1
+    for j in range(n-1):
+        cur,nex=arr[i][j],arr[i][j+1]
+        if cur==nex:
+            cnt+=1
+            if cnt>=m:
+                ans+=1
                 break
-            if k==j+m-1:
-                i+=1
-                cnt+=1
-
-                
+        else:
+            cnt=1
+            if cnt>=m:
+                ans+=1
+                break
         
-for j in range(n):
-    for i in range(n):
-        if j>=n:
-            break
-        cur=arr[i][j]
-        for l in range(i,i+m):
-            if i+m>n:
-                continue
-            if cur!=arr[l][j]:
-                break
-            if l==i+m-1:
-                cnt+=1
-                j+=1
 
-print(cnt)
+for j in range(n):
+    cnt=1
+    for i in range(n-1):
+        cur,nex=arr[i][j],arr[i+1][j]
+        if cur==nex:
+            cnt+=1
+            if cnt>=m:
+                ans+=1
+                break
+        else:
+            cnt=1
+            if cnt>=m:
+                ans+=1
+                break
+print(ans)
