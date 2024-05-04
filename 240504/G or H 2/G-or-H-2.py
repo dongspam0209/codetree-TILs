@@ -1,7 +1,7 @@
 import sys
 MAX_INT=-sys.maxsize
 N=int(input())
-arr=['']*100
+arr=['']*101
 for _ in range(N):
     idx,word=input().split()
     idx=int(idx)
