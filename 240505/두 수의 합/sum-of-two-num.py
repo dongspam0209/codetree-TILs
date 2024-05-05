@@ -1,12 +1,12 @@
+from collections import defaultdict
 n,k=map(int,input().split())
 arr=list(map(int,input().split()))
-num_dict={}
+num_dict=defaultdict(list)
 for idx,elem in enumerate(arr):
-    num_dict[idx]=elem
-
+    num_dict[elem].append(idx+1)
 cnt=0
-for i in range(n-1):
-    for j in range(i+1,n):
-        if num_dict[i]+num_dict[j]==k:
-            cnt+=1
-print(cnt)
+for i in num_dict:
+    temp_score=k-i
+    if temp_score in num_dict:
+        cnt+=len(num_dict[temp_score])
+print(cnt//2)
