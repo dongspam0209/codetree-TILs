@@ -12,6 +12,8 @@ for i in range(n):
     tmp=arr[i]
     check_score=k-tmp
     if check_score in num_dict:
-        cnt+=len(num_dict[check_score])-1
-
+        index_list=num_dict[check_score]
+        if i+1 in index_list:
+            cnt+=len(num_dict[check_score])-1
+        cnt+=len(num_dict[check_score])
 print(cnt//2)
