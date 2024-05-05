@@ -22,7 +22,7 @@ for i in range(n):
                     cost+=arr[i+y][j+x]
 
                 cost+=arr[i][j+x]
-            if m*cost-k**2-(k+1)**2>0:
+            if m*cost-k**2-(k+1)**2>=0:
                 # print('k:',k,'i,j:',(i,j),cost)
                 MAX_INT=max(MAX_INT,cost)
 
@@ -30,7 +30,7 @@ for i in range(n):
     for j in range(n):
         cost=0
         cost+=arr[i][j]
-        if m*cost>1:
+        if m*cost>=1:
             MAX_INT=max(MAX_INT,cost)
 
 
