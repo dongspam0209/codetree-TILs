@@ -6,7 +6,7 @@ for _ in range(n):
     arr.append(list(map(int,input().split())))
 for i in range(n):
     for j in range(n):
-        for k in range(1,5):
+        for k in range(1,2*n+1):
             cost=0
             for x in range(-k,k+1):
                 if j+x < 0 or j+x>=n:
