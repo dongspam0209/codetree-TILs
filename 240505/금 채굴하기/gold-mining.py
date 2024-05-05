@@ -1,5 +1,5 @@
 import sys
-MAX_INT=-sys.maxsize
+MAX_INT=0
 n,m=map(int,input().split())
 arr=[]
 for _ in range(n):
