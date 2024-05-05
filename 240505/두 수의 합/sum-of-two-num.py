@@ -13,7 +13,10 @@ for i in range(n):
     check_score=k-tmp
     if check_score in num_dict:
         index_list=num_dict[check_score]
+        # print(i+1, index_list)
         if i+1 in index_list:
             cnt+=len(num_dict[check_score])-1
-        cnt+=len(num_dict[check_score])
+        else:
+            cnt+=len(num_dict[check_score])
+    # print(cnt)
 print(cnt//2)
