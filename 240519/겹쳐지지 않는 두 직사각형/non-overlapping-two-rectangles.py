@@ -1,8 +1,12 @@
 import sys
 MAX_INT=-sys.maxsize
+
 n,m=map(int,input().split())
 grid=[]
 visit=[[0]*m]*n
+print(visit)
+sex=[[0]*m for _ in range(n)]
+print(sex)
 for _ in range(n):
     grid.append(list(map(int,input().split())))
 
@@ -33,23 +37,25 @@ def check_overlapped(x1,y1,x2,y2,i,j,k,l):
 def rect_sum(x1,y1,x2,y2):
     return sum([grid[i][j] for i in range(x1,x2+1) for j in range(y1,y2+1)])
 
-def rect_score(x1,y1,x2,y2):
+def rect_score_ans(x1,y1,x2,y2):
     rect_score=MAX_INT
     for i in range(n):
         for j in range(m):
             for k in range(i,n):
                 for l in range(j,m):
                     if not check_overlapped(x1,y1,x2,y2,i,j,k,l):
-                       rect_score=max(rect_score,rect_sum(x1,y1,x2,y2)+rect_sum(i,j,k,l))
+                        rect_score=max(rect_score,rect_sum(x1,y1,x2,y2)+rect_sum(i,j,k,l))
+                    
 
     return rect_score
 
+MAX_INT=-sys.maxsize
 
 
 for i in range(n):
     for j in range(m):
         for k in range(i,n):
             for l in range(j,m):
-                MAX_INT=max(MAX_INT,rect_score(i,j,k,l))
+                MAX_INT=max(MAX_INT,rect_score_ans(i,j,k,l))
 
 print(MAX_INT)
