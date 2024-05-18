@@ -3,10 +3,8 @@ MAX_INT=-sys.maxsize
 
 n,m=map(int,input().split())
 grid=[]
-visit=[[0]*m]*n
-print(visit)
-sex=[[0]*m for _ in range(n)]
-print(sex)
+visit=[[0]*m for _ in range(n)]
+
 for _ in range(n):
     grid.append(list(map(int,input().split())))
 
