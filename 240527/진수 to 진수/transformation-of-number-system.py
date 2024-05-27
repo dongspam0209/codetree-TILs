@@ -3,7 +3,7 @@ n=list(map(int,input()))
 
 pow_idx=0
 dec=0
-for idx in n:
+for idx in n[::-1]:
     dec+=idx*a**pow_idx
     pow_idx+=1
 
